@@ -1,0 +1,592 @@
+/* ------------------- GLOBAL --------------------- */
+
+* {
+    text-decoration: none;
+    list-style: none;
+    color: black;
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+body {
+    background-color: black;
+    margin: 2rem 5rem;
+}
+
+/* ------------------- NAVBAR --------------------- */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    margin: auto;
+    text-align: center;
+}
+
+nav img {
+    width: 2rem;
+}
+
+h1 {
+    font-size: 1rem;
+    font-weight: 500;
+    margin: auto 2rem;
+    text-transform: uppercase;
+    border-bottom: 1px solid rgb(102, 152, 175);
+    color: #fff;
+}
+
+/* ------------------- SEARCHBAR --------------------- */
+
+.searchbar {
+    display: grid;
+    grid-template-columns: 15% auto 15%;
+    grid-template-rows: repeat(2, 1fr);
+    margin: 2rem 8rem;
+    border: 2px solid rgb(102, 152, 175);
+    border-radius: 0.5rem;
+    padding: 2rem 2rem 0 2rem;
+}
+
+.searchbar input {
+    color:white;
+    font-size: 1.1rem;
+    grid-column: auto;
+    border: none;
+    outline: none;
+    margin-left: 3rem;
+    background-color: rgba(0, 0, 0, 0.883);
+}
+
+.searchbar select {
+    grid-column: auto;
+    font-size: 1rem;
+    outline: none;
+    padding: 0 0.5rem;
+    border: none;
+    background-color: transparent;
+    border-radius: 0.5rem;
+}
+
+.searchbar button {
+    grid-column: 1 / span 3;
+    background-color: rgb(102, 152, 175);
+    margin: auto;
+    width: 15%;
+    padding: 0.6rem 0;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 500;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+
+.title {
+    color: #fff;
+}
+
+/* ------------------- CONTENT --------------------- */
+
+.content {
+    margin: 2rem 8rem;
+    line-height: 2rem;
+    background-color: black;
+}
+
+.ads {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: black;
+}
+
+.ad {
+    width: 95%;
+    margin: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border: 4px solid rgb(102, 152, 175);
+    border-radius: 10px;
+    background-color: rgb(188, 207, 216);
+}
+
+.content img {
+    width: 20rem;
+    height: 20rem;
+    object-fit: cover;
+    padding: 1em;
+}
+
+.description {
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.content h2 {
+    margin-left: 1rem;
+    color: #fff;
+}
+
+.content h3 {
+    color: black;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.content h4 {
+    color: black;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.content h5, .content h6, .content p {
+    color: rgb(0, 0, 0, 0.7);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+}
+
+.top-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ------------------- FOOTER --------------------- */
+
+.active {
+    color: white;
+    font-size: 1.5em;
+    background-color: rgb(102, 152, 175);
+    padding: 0.3em;
+    margin: 0.2em;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.inactive {
+    color: white;
+    font-size: 1.5em;
+    padding: 0.3em;
+    margin: 0.2em;
+    font-weight: bold;
+}
+
+/* --------------- ad content --------------- */
+
+.adindex {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 3rem auto;
+    margin: 2rem 8rem;
+    line-height: 2rem;
+    font-size: 1.4rem;
+}
+
+.adindex h3 {
+    color: rgb(0, 0, 0, 0.4);
+    font-size: 1rem;
+    font-weight: 600;
+    grid-column: 1 / span 2;
+    margin: 1rem 0;
+}
+
+.displayuser {
+    margin-left: 2rem;
+    border: 4px solid rgb(102, 152, 175);
+    border-radius: 10px;
+    background-color: rgb(188, 207, 216);
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+}
+
+.entete {
+    display: flex;
+    margin: 1rem;
+}
+
+.entete img {
+    width: 5rem;
+}
+
+.entete .descruser {
+    margin: auto;
+    margin-left: 1rem;
+}
+
+.entete .descruser .name {
+    color: rgb(0, 0, 0, 0.5);
+    font-weight: 500;
+}
+
+.entete .descruser .nbad {
+    color: rgb(0, 0, 0, 0.5);
+}
+
+.contactoffer {
+    margin: 0 2rem;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.contactoffer button {
+    border: 4px solid rgb(102, 152, 175);
+    border-radius: 0.5rem;
+    margin: 0.5rem 0.5rem;
+    padding: 0.8rem;
+    text-align: center;
+    color: white;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.contactoffer .makeoffer {
+    grid-row: 1;
+    grid-column: 1 / span 2;
+    background-color: rgb(102, 152, 175);
+}
+
+.contactoffer .displayphone, .contactoffer .submessage, .contactoffer .displayphoneok {
+    grid-row: 2;
+}
+
+.contactoffer .displayphone, .contactoffer .displayphoneok {
+    color: blue;
+    background-color: white;
+    border: 1px solid blue;
+}
+
+.contactoffer .submessage {
+    background-color: blue;
+    border: 1px solid blue;
+}
+
+.displayphone span {
+    color: blue;
+    /* margin: auto; */
+}
+
+.phonenumber {
+    display: none;
+}
+
+.displayphone:hover .displaytitlephone {
+    display: none;
+}
+
+.displayphone:hover .phonenumber {
+    display: flex;
+}
+
+.displayad {
+    border: 4px solid rgb(102, 152, 175);
+    border-radius: 10px;
+    background-color: rgb(188, 207, 216);
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+    display: flex;
+}
+
+.descriptionad {
+    display: block;
+    margin: 1rem;
+}
+
+.displayad img {
+    width: 30rem;
+    height: 30rem;
+    object-fit: cover;
+}
+
+.descr-top {
+    margin-bottom: 1rem;
+    border-bottom: 1px solid rgb(0, 0, 0, 0.3);
+}
+
+.descr-top h2 {
+    color: black;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.descr-top h4 {
+    color: black;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.descr-top p {
+    color: black;
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+
+.descr-bottom h5 {
+    color: black;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.descr-bottom p {
+    color: black;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+/* --------------- public profile --------------- */
+
+.card-profile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 4px solid rgb(102, 152, 175);
+    border-radius: 10px;
+    background-color: rgb(188, 207, 216);
+    padding: 1rem;
+    margin: 2rem;
+}
+
+.card-pic-stars {
+    display: flex;
+}
+
+.card-pic-stars .profile-pic {
+    width: 10rem;
+}
+
+.card-stars {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.card-stars-public-profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.card-stars-ads i, .card-stars-public-profile i {
+    width: 1rem;
+}
+
+.public-profile-ads {
+    width: 40%;
+    border: 4px solid rgb(102, 152, 175);
+    border-radius: 10px;
+    background-color: rgb(71, 112, 131);
+    margin: 2rem auto;
+    padding: 1em;
+}
+
+.public-profile-ads-display {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+}
+
+.public-profile-ad {
+    border: 4px solid rgb(102, 152, 175);
+    border-radius: 10px;
+    background-color: rgb(188, 207, 216);
+    display: flex;
+    text-transform: capitalize;
+}
+
+.public-profile-ad .description {
+    margin: 1rem 2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50% 50%;
+}
+
+.public-profile-ad h2 {
+    margin-left: 1rem;
+}
+
+.public-profile-ad h3 {
+    color: black;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.public-profile-ad h4 {
+    color: black;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.public-profile-ad h5, .public-profile-ad h6, .public-profile-ad p {
+    color: rgb(0, 0, 0, 0.4);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+}
+
+.card-settings {
+    display: flex;
+    justify-content: space-around;
+    border: 4px solid rgb(102, 152, 175);
+    border-radius: 10px;
+    background-color: rgb(71, 112, 131);
+    width: 50%;
+    margin: auto;
+    line-height: 2rem;
+}
+
+.card-settings a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(188, 207, 216);
+    margin: auto;
+    width: 30%;
+    border: 4px solid rgb(102, 152, 175);
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+/* user content */
+
+.userads {
+    border: 4px solid rgb(102, 152, 175);
+    border-radius: 10px;
+    background-color: rgb(71, 112, 131);
+    margin: 2rem 8rem;
+    line-height: 2rem;
+}
+
+.titleuserad {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1em;
+}
+
+.titleuserad h2 {
+    color: #fff;
+}
+
+.titleuserad a {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    margin-right: 0.5rem;
+    color: rgb(203, 238, 238);
+    border: 1px solid rgb(203, 238, 238);
+}
+
+.userad {
+    border: 4px solid rgb(102, 152, 175);
+    border-radius: 10px;
+    background-color: rgb(188, 207, 216);
+    margin: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.aduser {
+    display: flex;
+}
+
+.date {
+    margin: 1rem 2rem;
+    line-height: 1.5rem;
+    text-align: center;
+}
+
+.aduserdescription {
+    margin: 1rem 2rem;
+}
+
+.aduserdescription h3 {
+    font-weight: 500;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+}
+
+.aduserdescription h5 {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.aduserdescription p {
+    color: rgb(0, 0, 0, 0.5);
+}
+
+.crud-ads-user {
+    margin-top: 0.8rem;
+}
+
+.crud-ads-user a, .crud-ads-user button {
+    padding: 0.8rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    margin-right: 0.5rem;
+}
+
+.editad {
+    color: blue;
+    border: 1px solid blue;
+}
+
+.deletead {
+    color: red;
+    border: 1px solid red;
+}
+
+.getmessage {
+    color: rgb(0, 255, 119);
+}
+
+/* add ad from user */
+
+.create-ads-user {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.case-user {
+    padding: 1.5rem 0;
+    border: 4px solid rgb(102, 152, 175);
+    border-radius: 10px;
+    background-color: rgb(188, 207, 216);
+    text-align: center;
+}
+
+.admin-content {
+    margin: 2rem 0;
+}
+
+.admin-content h2 {
+    color: #fff;
+    margin: 1rem 0;
+}
+
+.message {
+    color: rgb(42, 107, 73);
+    padding: 1rem 0;
+}
+
+/* private profile */
+
+.user-update-user {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}
